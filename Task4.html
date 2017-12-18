@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Курс валют</title>
+</head>
+<body>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=3', false);
+        xhr.send();
+        if (xhr.status != 200) {
+            console.log( xhr.status + ': ' + xhr.statusText );
+        } else {
+            console.log( xhr.responseText );
+        }
+    </script>
+</body>
+</html>
